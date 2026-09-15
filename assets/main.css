@@ -123,6 +123,52 @@ td.sponsor img{width: 100%}
 
 footer{font-size:0.875em; margin-top:12em; text-align:center;}
 
+/* Resizes the container block and keeps it centered on the page */
+.hotel-container {
+    max-width: 300px;         /* Adjust this number (e.g., 400px or 600px) to make the image smaller or bigger */
+    margin: 20px auto;        /* Adds space on the top/bottom and centers it horizontally */
+    text-align: center;       /* Centers the caption text underneath */
+}
+
+/* Forces the photo to fill the exact size of the container smoothly */
+.hotel-container img {
+    width: 100%;
+    height: auto;             /* Maintains the image's original proportions so it doesn't stretch */
+    border-radius: 4px;       /* Optional: rounds the corners slightly for a modern look */
+}
+
+/* Styles the small attribution line underneath */
+.hotel-credit {
+    font-size: 0.85em;        /* Makes the font smaller than regular page text */
+    color: #666;              /* Changes the text to a subtle gray so it isn't distracting */
+    margin-top: 8px;          /* Adds a clean gap directly beneath the image */
+    font-style: italic;       /* Makes the attribution text italic */
+}
+
+.single-flyer-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.download-button {
+    background-color: #52739e; 
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.download-button:hover {
+    background-color: #3d5677; /* Darkens slightly when hovered */
+    cursor: pointer;
+}
+
 /* My hacky way of making the site mobile-friendly */
 @media only screen and (max-width: 1100px) {
     h2{font-size:3.00em;}
