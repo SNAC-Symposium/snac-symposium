@@ -169,6 +169,62 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     cursor: pointer;
 }
 
+/* Container that centers the 4-and-3 grid layout */
+.organizers-grid {
+    display: flex;
+    flex-wrap: wrap;          /* Allows profiles to drop to a new line */
+    justify-content: center;   /* Centers the items horizontally on every row! */
+    gap: 20px;                /* Adds neat spacing between all profiles */
+    margin-top: 30px;
+}
+
+/* Individual card styling for each person */
+.organizer-profile {
+    flex: 0 1 calc(25% - 20px);/* Forces exactly 4 profiles per row on big screens */
+    min-width: 160px;          /* Prevents them from shrinking too small */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Forces the placeholder images to stay small, uniform, and responsive */
+.organizer-profile img {
+    width: 100%;
+    max-width: 150px;          /* Limits the size of the headshot */
+    height: 150px;             /* Keeps the image area uniform */
+    object-fit: cover;         /* Keeps placeholder/real photos proportional */
+    border-radius: 50%;        /* Optional: makes the profile photos a modern circle! Remove this line if you want squares */
+}
+
+/* Name and Affiliation labels */
+.organizer-name {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.organizer-pos {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 3px;
+}
+
+.organizer-affil {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 3px;
+}
+
+/* Styles the small banner attribution line */
+.banner-credit {
+    font-size: 0.8em;         /* Makes it significantly smaller than normal paragraph text */
+    color: #777;              /* Changes the text to a subtle, neutral gray */
+    text-align: right;        /* Aligns it neatly to the right edge—change to 'center' or 'left' if you prefer */
+    margin-top: 5px;          /* Tucks it up close to the banner image */
+    margin-bottom: 15px;      /* Adds a clean gap before your main headers begin */
+    font-style: italic;       /* Makes it italicized for a standard photo-credit look */
+}
+
 /* My hacky way of making the site mobile-friendly */
 @media only screen and (max-width: 1100px) {
     h2{font-size:3.00em;}
