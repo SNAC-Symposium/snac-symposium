@@ -172,41 +172,36 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
 /* Container that centers the 4-and-3 grid layout */
 .organizers-grid {
     display: flex;
-    flex-wrap: wrap;          /* Allows profiles to drop to a new line */
-    justify-content: center;   /* Centers the items horizontally on every row! */
-    gap: 20px;                /* Adds neat spacing between all profiles */
+    flex-wrap: wrap;          
+    justify-content: center;   
+    gap: 30px;                /* Increased gap to give photos breathing room */
     margin-top: 30px;
 }
 
-/* Individual card styling for each person */
+/* The frame containing each person */
 .organizer-profile {
-    flex: 0 1 calc(25% - 20px);/* Forces exactly 4 profiles per row on big screens */
-    min-width: 160px;          /* Prevents them from shrinking too small */
+    flex: 0 1 180px;           /* Gives each person a completely uniform container width */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;    /* Aligns photo, name, and institution straight down */
+    align-items: center;       /* Perfectly centers everything inside the block */
 }
 
-/* Forces the placeholder images to stay small, uniform, and responsive */
+/* The images themselves - setting max-width to auto-scale crisp originals */
 .organizer-profile img {
-    width: 100%;
-    max-width: 150px;          /* Limits the size of the headshot */
-    height: 150px;             /* Keeps the image area uniform */
-    object-fit: cover;         /* Keeps placeholder/real photos proportional */
-    border-radius: 50%;        /* Optional: makes the profile photos a modern circle! Remove this line if you want squares */
+    max-width: 140px;          /* Restricts wide photos from pushing boundaries */
+    height: auto;              /* KEEPING THE AUTO HEIGHT THAT MAKES THEM CRISP */
+    border-radius: 50%;        /* Keeps them circular */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow to mask minor edge differences */
 }
 
-/* Name and Affiliation labels */
+/* Name and Affiliation labels stay perfectly uniform now */
 .organizer-name {
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 1.05em;
     color: #333;
-}
-
-.organizer-pos {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 3px;
 }
 
 .organizer-affil {
