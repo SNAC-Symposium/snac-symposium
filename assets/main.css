@@ -220,6 +220,27 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     font-style: italic;       /* Makes it italicized for a standard photo-credit look */
 }
 
+.speaker-bio {
+  display: flex;           /* Places child elements side-by-side */
+  align-items: flex-start; /* Aligns the top of the text with the top of the photo */
+  gap: 24px;               /* Adds space between the photo and the paragraph */
+  max-width: 800px;        /* Optional: keeps the line length easy to read */
+  margin: 20px auto 50px;       /* Optional: centers the whole block on the page, adds some space below */
+}
+
+.speaker-photo {
+  width: 220px;            /* Sets a fixed width for the photo */
+  height: auto;            /* Keeps the photo's original proportions */
+  border-radius: 8px;      /* Optional: slightly rounds the image corners */
+  flex-shrink: 0;          /* Prevents the image from getting squished by long text */
+}
+
+.speaker-text p {
+  margin-top: 0;           /* Removes extra default top spacing on the paragraph */
+  line-height: 1.6;        /* Improves readability */
+  max-width: 50ch;         /* Narrower text */
+}
+
 /* My hacky way of making the site mobile-friendly */
 @media only screen and (max-width: 1100px) {
     h2{font-size:3.00em;}
@@ -230,3 +251,10 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     table.footer{font-size:0.33em;}
 }
 
+@media (max-width: 600px) {
+  .speaker-bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
